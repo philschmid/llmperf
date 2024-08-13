@@ -101,7 +101,6 @@ class SageMakerClient(LLMClient):
 
             event_stream = response["Body"]
             json_byte = b""
-            generated_text = prompt
             start_json = b"{"
 
             for line, ttft, _ in LineIterator(event_stream):
